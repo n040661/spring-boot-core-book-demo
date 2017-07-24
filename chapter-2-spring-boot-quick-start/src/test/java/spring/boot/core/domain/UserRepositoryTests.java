@@ -36,7 +36,6 @@ public class UserRepositoryTests {
      */
     @Test
     public void testDelete() {
-        userRepository.flush();
 
         // 新增两个用户数据
         User mumu = new User();
