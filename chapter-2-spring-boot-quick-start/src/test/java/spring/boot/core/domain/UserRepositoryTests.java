@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryTests {
@@ -24,7 +22,7 @@ public class UserRepositoryTests {
         User user = new User();
         user.setName("mumu");
         user.setAge(2);
-        user.setBirthday(new Date());
+//        user.setBirthday(new Date());
         user = userRepository.save(user);
 
         // 验证新增用户
@@ -41,13 +39,13 @@ public class UserRepositoryTests {
         User mumu = new User();
         mumu.setName("mumu");
         mumu.setAge(2);
-        mumu.setBirthday(new Date());
+//        mumu.setBirthday(new Date());
         userRepository.save(mumu);
 
         User zizi = new User();
         zizi.setName("zizi");
         zizi.setAge(25);
-        zizi.setBirthday(new Date());
+//        zizi.setBirthday(new Date());
         userRepository.save(zizi);
 
         // 验证是否获取的用户列表大小是 2
@@ -68,7 +66,7 @@ public class UserRepositoryTests {
         User user = new User();
         user.setName("mumu");
         user.setAge(2);
-        user.setBirthday(new Date());
+//        user.setBirthday(new Date());
         user = userRepository.save(user);
 
         user.setName("zizi");
@@ -88,13 +86,13 @@ public class UserRepositoryTests {
         User mumu = new User();
         mumu.setName("mumu");
         mumu.setAge(2);
-        mumu.setBirthday(new Date());
+//        mumu.setBirthday(new Date());
         userRepository.save(mumu);
 
         User zizi = new User();
         zizi.setName("zizi");
         zizi.setAge(25);
-        zizi.setBirthday(new Date());
+//        zizi.setBirthday(new Date());
         userRepository.save(zizi);
 
         // 验证是否获取的用户列表大小是 2
@@ -110,7 +108,7 @@ public class UserRepositoryTests {
         User mumu = new User();
         mumu.setName("mumu");
         mumu.setAge(2);
-        mumu.setBirthday(new Date());
+//        mumu.setBirthday(new Date());
         userRepository.save(mumu);
 
         // 验证是否获取的用户是否是插入的用户

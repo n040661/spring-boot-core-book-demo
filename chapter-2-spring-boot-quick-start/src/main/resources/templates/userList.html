@@ -15,10 +15,9 @@
 
             <h5> 《 Spring Boot 2.x 核心技术实战》第二章快速入门案例</h5>
 
-
             <table class="table table-hover table-condensed">
                 <legend>
-                    <small>用户列表</small>
+                    <strong>用户列表</strong>
                 </legend>
                 <thead>
                 <tr>
@@ -37,8 +36,8 @@
                     <th scope="row" th:text="${user.id}"></th>
                     <td><a th:href="@{/users/update/{userId}(userId=${user.id})}" th:text="${user.name}"></a></td>
                     <td th:text="${user.age}"></td>
-                    <td th:text="${#dates.format(user.birthday, 'yyyy-MM-dd')}"></td>
-                    <td><a th:href="@{/users/delete/{userId}(userId=${user.id})}">删除</a></td>
+                    <td th:text="${user.birthday}"></td>
+                    <td><a class="btn btn-danger" th:href="@{/users/delete/{userId}(userId=${user.id})}">删除</a></td>
                 </tr>
                 </tbody>
             </table>

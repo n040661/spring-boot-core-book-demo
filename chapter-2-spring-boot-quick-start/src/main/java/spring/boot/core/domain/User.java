@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 用户实体类
@@ -34,7 +33,7 @@ public class User implements Serializable {
     /**
      * 出生时间
      */
-    private Date birthday;
+    private String birthday;
 
     public Long getId() {
         return id;
@@ -60,11 +59,11 @@ public class User implements Serializable {
         this.age = age;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
