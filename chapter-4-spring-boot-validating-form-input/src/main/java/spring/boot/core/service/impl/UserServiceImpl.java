@@ -33,4 +33,25 @@ public class UserServiceImpl implements UserService {
         LOGGER.info("新增用户：" + user.toString());
         return userRepository.save(user);
     }
+
+    @Override
+    public User update(User user) {
+        LOGGER.info("更新用户：" + user.toString());
+        return userRepository.save(user);
+    }
+
+    @Override
+    public User delete(Long id) {
+        User user = userRepository.findById(id).get();
+        userRepository.delete(user);
+
+        LOGGER.info("删除用户：" + user.toString());
+        return user;
+    }
+
+    @Override
+    public User findById(Long id) {
+        LOGGER.info("获取用户 ID ：" + id);
+        return userRepository.findById(id).get();
+    }
 }
