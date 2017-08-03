@@ -20,25 +20,22 @@
                     <strong>用户列表</strong>
                 </legend>
                 <thead>
-                <tr>
-                    <th>用户编号</th>
-                    <th>名称</th>
-                    <th>年龄</th>
-                    <th>出生时间</th>
-                    <th>管理</th>
-                </tr>
+                    <tr>
+                        <th>用户编号</th>
+                        <th>名称</th>
+                        <th>年龄</th>
+                        <th>出生时间</th>
+                        <th>管理</th>
+                    </tr>
                 </thead>
                 <tbody>
-
-                <br/>
-                <br/>
-                <tr th:each="user : ${userList}">
-                    <th scope="row" th:text="${user.id}"></th>
-                    <td><a th:href="@{/users/update/{userId}(userId=${user.id})}" th:text="${user.name}"></a></td>
-                    <td th:text="${user.age}"></td>
-                    <td th:text="${user.birthday}"></td>
-                    <td><a class="btn btn-danger" th:href="@{/users/delete/{userId}(userId=${user.id})}">删除</a></td>
-                </tr>
+                    <tr th:each="user : ${userList}">
+                        <th scope="row" th:text="${user.id}"></th>
+                        <td><a th:href="@{/users/update/{userId}(userId=${user.id})}" th:text="${user.name}"></a></td>
+                        <td th:text="${user.age}"></td>
+                        <td th:text="${user.birthday}"></td>
+                        <td><a class="btn btn-danger" th:href="@{/users/delete/{userId}(userId=${user.id})}">删除</a></td>
+                    </tr>
                 </tbody>
             </table>
 

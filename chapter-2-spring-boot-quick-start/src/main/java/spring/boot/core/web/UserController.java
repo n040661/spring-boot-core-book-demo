@@ -11,6 +11,8 @@ import spring.boot.core.domain.User;
 import spring.boot.core.service.UserService;
 
 /**
+ * 用户控制层
+ *
  * Created by bysocket on 24/07/2017.
  */
 @Controller
@@ -18,13 +20,15 @@ import spring.boot.core.service.UserService;
 public class UserController {
 
     @Autowired
-    UserService userService;
+    UserService userService;          // 用户服务层
 
+    /**
+     *  获取用户列表
+     *    处理 "/users" 的GET请求，用来获取用户列表
+     *    通过 @RequestParam 传递参数，进一步实现条件查询或者分页查询
+     */
     @RequestMapping(method = RequestMethod.GET)
     public String getUserList(ModelMap map) {
-
-        // 处理"/users/"的GET请求，用来获取用户列表
-        // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
         map.addAttribute("userList", userService.findAll());
         return "userList";
     }
