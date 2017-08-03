@@ -1,5 +1,7 @@
 package spring.boot.core.domain;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -43,6 +45,7 @@ public class User implements Serializable {
      * 出生时间
      */
     @NotNull(message = "出生时间不能为空")
+    @Email
     private String birthday;
 
     public Long getId() {
