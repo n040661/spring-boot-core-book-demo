@@ -23,13 +23,11 @@
                 <input type="hidden" name="id" th:value="${user.id}"/>
 
                 <div class="form-group">
-                    <label for="user_name" class="col-sm-2 control-label">名称</label>
+                    <label for="user_name" class="col-sm-2 control-label">名称:</label>
                     <div class="col-xs-4">
                         <input type="text" class="form-control" id="user_name" name="name" th:value="${user.name}" th:field="*{user.name}" />
                     </div>
-                    <div class="col-xs-4">
-                        <span th:if="${#fields.hasErrors('user.name')}" th:errors="*{user.name}">姓名有误!</span>
-                    </div>
+                    <label class="col-sm-2 control-label text-danger" th:if="${#fields.hasErrors('user.name')}" th:errors="*{user.name}">姓名有误!</label>
                 </div>
 
                 <div class="form-group">
@@ -37,9 +35,7 @@
                     <div class="col-xs-4">
                         <input type="text" class="form-control" id="user_age" name="age" th:value="${user.age}" th:field="*{user.age}" />
                     </div>
-                    <div class="col-xs-4">
-                        <span th:if="${#fields.hasErrors('user.age')}" th:errors="*{user.age}">年龄有误!</span>
-                    </div>
+                    <label class="col-sm-2 control-label text-danger" th:if="${#fields.hasErrors('user.age')}" th:errors="*{user.age}">年龄有误!</label>
                 </div>
 
                 <div class="form-group">
@@ -47,10 +43,7 @@
                     <div class="col-xs-4">
                         <input type="date" class="form-control" id="user_birthday" name="birthday" th:value="${user.birthday}" th:field="*{user.birthday}"/>
                     </div>
-                    <div class="col-xs-4">
-                        <span th:if="${#fields.hasErrors('user.birthday')}" th:errors="*{user.birthday}">生日有误!</span>
-                    </div>
-
+                    <label class="col-sm-2 control-label text-danger" th:if="${#fields.hasErrors('user.birthday')}" th:errors="*{user.birthday}">生日有误!</label>
                 </div>
 
                 <div class="form-group">

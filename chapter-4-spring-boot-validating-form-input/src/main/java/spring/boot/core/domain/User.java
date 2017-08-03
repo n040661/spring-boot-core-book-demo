@@ -27,22 +27,22 @@ public class User implements Serializable {
     /**
      * 名称
      */
-    @NotNull
-    @Size(min = 2, max = 20)
+    @NotNull(message = "姓名不能为空")
+    @Size(min = 2, max = 8, message = "姓名长度必须大于 2 且小于 20 字")
     private String name;
 
     /**
      * 年龄
      */
-    @NotNull
-    @Min(0)
-    @Max(200)
+    @NotNull(message = "年龄不能为空")
+    @Min(value = 0, message = "年龄大于 0")
+    @Max(value = 300, message = "年龄不大于 300")
     private Integer age;
 
     /**
      * 出生时间
      */
-    @NotNull
+    @NotNull(message = "出生时间不能为空")
     private String birthday;
 
     public Long getId() {
